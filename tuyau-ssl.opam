@@ -1,0 +1,24 @@
+opam-version: "2.0"
+name:         "tuyau-ssl"
+maintainer:   "Romain Calascibetta <romain.calascibetta@gmail.com>"
+authors:      "Romain Calascibetta <romain.calascibetta@gmail.com>"
+homepage:     "https://github.com/mirage/tuyau"
+bug-reports:  "https://github.com/mirage/tuyau/issues"
+dev-repo:     "git+https://github.com/mirage/tuyau.git"
+doc:          "https://mirage.github.io/tuyau/"
+license:      "MIT"
+synopsis:     "Tuyau like pipe or conduit"
+description: """Burn conduit! BURN!"""
+
+build: [ "dune" "build" "-p" name "-j" jobs ]
+run-test: [ "dune" "runtest" "-p" name "-j" jobs ]
+
+depends: [
+  "ocaml"       {>= "4.07.0"}
+  "dune"
+  "tuyau"
+  "ke"
+  "ssl"
+  "logs"
+  "bigstringaf"
+]

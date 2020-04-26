@@ -1,0 +1,4 @@
+(library
+ (name tuyau_ssl)
+ (public_name tuyau-ssl)
+ (libraries logs bigstringaf ke ssl tuyau))
